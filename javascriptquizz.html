@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<title>javascript quizz</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4">
+				<h1>ELECTRONICS</h1>
+				<label for="">CH</label><br>
+				<input class="form-control" type="text" onchange="call();" id="enter1"><br>
+				<label for="">Grades</label><br>
+				<input class="form-control" type="text" onchange="call();" id="enter2"><br>
+				<label for="">GPA</label><br>
+				<input class="form-control" type="text" onchange="call();" id="enter_gpa"><br>
+			</div>
+			<div class="col-lg-3">
+				<h1>DLD</h1>
+				<label for="">CH</label><br>
+				<input class="form-control" type="text" onchange="call();" id="ads_numb"><br>
+				<label for="">Grades</label><br>
+				<input class="form-control" type="text" onchange="call();" id="grades_enzym"><br>
+				<label for="">GPA</label><br>
+				<input class="form-control" type="text" onchange="call();" id="grades_text"><br>
+			</div>
+			<div class="col-lg-3">
+				<h1>CALCULUS</h1>
+				<label for="">CH</label><br>
+				<input class="form-control" type="text" onchange="call();" id="enter5"><br>
+				<label for="">Grades</label><br>
+				<input class="form-control" type="text" onchange="call();" id="enter6"><br>
+				<label for="">GPA</label><br>
+				<input class="form-control" type="text" onchange="call();" id="grades_m"><br>
+			</div>
+		</div> <br>
+		<div class="row">
+			<div class="col-lg-4">
+				<label for="">CGPA</label><br>
+				<input class="form-control" type="text" onchange="call();" id="get_cgpa">
+				
+			</div>
+			<div class="col-4" id="result"></div>
+		</div>
+	</div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+	function call(){
+		var n1=Number(document.getElementById('enter1').value);
+		var n2=Number(document.getElementById('enter2').value);
+		var rs1=n1*n2;
+		document.getElementById('enter_gpa').value=rs1;
+		// 
+		var n3=Number(document.getElementById('ads_numb').value);
+		var n4=Number(document.getElementById('grades_enzym').value);
+		var rs2=n3*n4;
+		document.getElementById('grades_text').value=rs2;
+		// 
+		var n5=Number(document.getElementById('enter5').value);
+		var n6=Number(document.getElementById('enter6').value);
+		var rs3=n5*n5;
+		document.getElementById('grades_m').value=rs3;
+
+		//
+		var CH=n2+n4+n6;
+		var GPA=rs1+rs2+rs3;
+		var CGPA=GPA/CH;
+		document.getElementById('get_cgpa').value=CGPA;
+
+		if (CGPA>2.5){
+			document.getElementById('result').innerHTML="<h3>Pass</h3>";
+
+		}
+		 else {
+			document.getElementById('result').innerHTML="<h3>You have failed.</h3>";
+
+		}
+	}
+</script>

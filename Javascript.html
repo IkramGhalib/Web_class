@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JAVACRIPT</title>
+
+</head>
+<body>
+	
+<form action="">
+	<label for="">Input Number 1</label>
+	<input type="text" onchange="calculate()" name="num1" id="num1">
+	<br>
+	<br>
+	<label for="">Input Number 2</label>
+	<input type="text" onchange="calculate()" name="num2" id="num2">
+	<br>
+	<br>
+	<label for="">Result</label>
+	<input type="text" name="result" id="result">
+	
+</form>	
+
+	
+	
+   
+
+</body>
+
+</html>
+<script>
+	//function calculate() {
+		input_num1=Number(document.getElementById('num1').value);
+		input_num2=Number(document.getElementById('num2').value);
+
+		res=input_num1*input_num2;
+		document.getElementById('result').value=res;
+
+
+	}
+	function discount() {
+		var input_num1=Number(document.getElementById('num1').value);
+		var input_num2=Number(document.getElementById('num2').value);
+		var res=input_num1*input_num2;
+
+		res=input_num1*input_num2;
+		document.getElementById('result').value=res;
+		var total_price=res*10/100;
+		document.getElementById(total_price).value=total_price;
+
+
+	}
+	
+</script>
